@@ -5,5 +5,5 @@ type Props = {
 }
 
 export default function Content({}: Props) {
-  return <div></div>
+  return <div>This is some content to be shown in the overlay</div>
 }

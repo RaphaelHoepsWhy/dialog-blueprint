@@ -18,7 +18,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 import { useState } from "react"
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import useDevice, { Device } from "@/lib/useDevice"
 
 type Props = {
@@ -53,7 +52,7 @@ export function DialogOrDrawer({
         </DialogTrigger>
         <DialogContent>
           <div className="overflow-y-auto px-2">
-            <DialogHeader className="pb-10 pt-4">
+            <DialogHeader className="py-4">
               <DialogTitle>{title}</DialogTitle>
               <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
