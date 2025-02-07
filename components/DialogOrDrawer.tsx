@@ -22,7 +22,6 @@ import {
 } from "@/components/ui/drawer"
 import { useState } from "react"
 import useDevice, { Device } from "@/lib/useDevice"
-import { DialogDescription } from "@radix-ui/react-dialog"
 import { Button } from "./ui/button"
 
 type Props = {
@@ -66,7 +65,7 @@ export function DialogOrDrawer({
               {/* Title and description required for accessibility */}
               {/* If we don't want to render this, use <VisiuallyHidden> (@radix-ui/react-visually-hidden) to hide it */}
               <DialogTitle className="pb-4">{title}</DialogTitle>
-              <DialogDescription>{description}</DialogDescription>
+              {/* <DialogDescription>{description}</DialogDescription> */}
             </DialogHeader>
             {children}
             <DialogFooter className="mb-8 flex-row justify-end">
