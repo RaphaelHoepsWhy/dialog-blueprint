@@ -1,20 +1,24 @@
 import { DialogOrDrawer } from "@/components/DialogOrDrawer"
 import { Maximize } from "lucide-react"
+import Content from "./Content"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
     <div className="flex h-screen items-center justify-center">
       <DialogOrDrawer
         trigger={
-          <button className="flex items-center justify-between gap-2 rounded-md bg-white px-3 py-2 text-black">
+          <Button>
             <Maximize />
             Open
-          </button>
+          </Button>
         }
-        title={"Title"}
-        description={"Description"}
+        title={"Scrollable overlay"}
+        description={
+          "We're showing some dummy content blocks here. You should be able to scroll within the overlay"
+        }
       >
-        <h1>Content</h1>
+        <Content />
       </DialogOrDrawer>
     </div>
   )
