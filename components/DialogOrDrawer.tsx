@@ -57,13 +57,15 @@ export function DialogOrDrawer({
         <DialogTrigger asChild className="cursor-pointer">
           {trigger}
         </DialogTrigger>
+
         <DialogContent className="h-[70lvh]">
-          {/* Makes long content scrollable within the dialog*/}
-          <div className="overflow-y-auto px-2">
+          {/* Makes long content scrollable within the dialog. Scrollbar currently hidden. Depending on the
+          usecase/design/content you might want to show it instead */}
+          <div className="scrollbar-hidden overflow-y-auto px-2">
             <DialogHeader className="pb-10 pt-4">
               {/* Title and description required for accessibility */}
               {/* If we don't want to render this, use <VisiuallyHidden> (@radix-ui/react-visually-hidden) to hide it */}
-              <DialogTitle>{title}</DialogTitle>
+              <DialogTitle className="pb-4">{title}</DialogTitle>
               <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
             {children}
