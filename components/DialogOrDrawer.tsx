@@ -47,9 +47,9 @@ export function DialogOrDrawer({
 
   // component can be used in a controlled fashion (by providing an `open` prop
   // or uncontrolled (Then it will use the openInternal state)
-  const isOpen = typeof open !== undefined ? open : openInternal
+  const isOpen = typeof open !== "undefined" ? open : openInternal
   const setIsOpen =
-    typeof onOpenChange !== undefined ? onOpenChange : setOpenInternal
+    typeof onOpenChange !== "undefined" ? onOpenChange : setOpenInternal
 
   if (isDesktop) {
     return (
